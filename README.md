@@ -1,5 +1,5 @@
 # MajorSystem
 (EN)
-A python program aimed at providing words for the major sytem
+A python program aimed at providing words for the major sytem (note : only work in french for now)
 (FR)
 Un programme python qui vise à offrir des mots pour le système majeur
