@@ -16,7 +16,7 @@ consonnes_spéciales = {
 	"p" : {("", "h") : "8"},
 	"r" : {("e", " ") : ""},
 	"s" : {("", " ") : ""},
-	"l" : {("ouil", "e") : "", ("oui", "le") : ""},
+	"l" : {("ouil", "e") : "", ("oui", "le") : "", ("ei", "l") : "", ("eil", "") : "", ("ei", "") : ""},
 	"d" : {("", " ") : "", ("", "s ") : ""},
 	"x" : {},
 	"m" : {("", "p") : "", ("", "b") : ""}
@@ -81,9 +81,7 @@ def formatage(mot):
 	return(mot_formatté)
 
 
-def main():
-	print("Chargement du dictionnaire...")
-
+def dico_liste():
 	f = open("fr.txt")
 	r = [i[:-1] for i in f]
 	f.close()
@@ -98,6 +96,14 @@ def main():
 		else:
 			Dico_mémoire[phon] = [i]
 			Liste_mémoire.append(phon)
+	return(Dico_mémoire, Liste_mémoire)
+
+
+
+def main():
+	print("Chargement du dictionnaire...")
+
+	Dico_mémoire, Liste_mémoire = dico_liste()
 
 	os.system('cls' if os.name == 'nt' else 'clear')
 	while True:
